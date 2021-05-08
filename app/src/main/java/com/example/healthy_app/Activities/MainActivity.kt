@@ -3,8 +3,6 @@ package com.example.healthy_app.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatDialogFragment
-import com.example.healthy_app.Fragments.Color_Blindness_fragment
 import androidx.fragment.app.Fragment
 
 import com.example.healthy_app.R
