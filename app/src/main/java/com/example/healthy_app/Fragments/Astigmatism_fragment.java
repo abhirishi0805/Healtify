@@ -1,5 +1,7 @@
 package com.example.healthy_app.Fragments;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.healthy_app.R;
@@ -30,6 +33,8 @@ public class Astigmatism_fragment extends Fragment {
 
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
+
+    final long ONE_MEGABYTE = 1024 * 1024;
 
     int questionNumber;
     int answerStatus[] = {0, 0, 0, 0};      // 0 -> answered wrong,     1 -> answered correctly
@@ -190,10 +195,18 @@ public class Astigmatism_fragment extends Fragment {
         switch (questionNumber){
 
             case 1:
-                storageReference = storageReference.child("ast1.jpg");
-                Glide.with(this)
-                        .load(storageReference)
-                        .into(ivAstigmatismQuestion);
+                storageReference.child("ast1.jpg").getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        ivAstigmatismQuestion.setImageBitmap(bitmap);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(getContext(), "Error occured:" + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 tvAstigmatismQuestion.setText("How many lines are present here?");
                 btnAstigmatism1.setText("24");
@@ -203,10 +216,18 @@ public class Astigmatism_fragment extends Fragment {
                 break;
 
             case 2:
-                storageReference = storageReference.child("ast2.jpg");
-                Glide.with(this)
-                        .load(storageReference)
-                        .into(ivAstigmatismQuestion);
+                storageReference.child("ast2.jpg").getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        ivAstigmatismQuestion.setImageBitmap(bitmap);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(getContext(), "Error occured:" + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 tvAstigmatismQuestion.setText("How many lines are light grey shaded?");
                 btnAstigmatism1.setText("24");
@@ -216,23 +237,39 @@ public class Astigmatism_fragment extends Fragment {
                 break;
 
             case 3:
-                storageReference = storageReference.child("ast3.jpg");
-                Glide.with(this)
-                        .load(storageReference)
-                        .into(ivAstigmatismQuestion);
+                storageReference.child("ast3.jpg").getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        ivAstigmatismQuestion.setImageBitmap(bitmap);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(getContext(), "Error occured:" + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 tvAstigmatismQuestion.setText("What number do you see here?");
                 btnAstigmatism1.setText("3246");
                 btnAstigmatism2.setText("3240");
                 btnAstigmatism3.setText("1240");
-                btnAstigmatism4.setText("None of these");
+                btnAstigmatism4.setText("NOTA");
                 break;
 
             case 4:
-                storageReference = storageReference.child("ast4.jpg");
-                Glide.with(this)
-                        .load(storageReference)
-                        .into(ivAstigmatismQuestion);
+                storageReference.child("ast4.jpg").getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                    @Override
+                    public void onSuccess(byte[] bytes) {
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        ivAstigmatismQuestion.setImageBitmap(bitmap);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(getContext(), "Error occured:" + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 tvAstigmatismQuestion.setText("Are all the lines in the picture uniform?");
                 btnAstigmatism1.setText("Yes");
