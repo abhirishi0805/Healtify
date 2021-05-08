@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "513081244081",
+    "project_id": "healtify-66f2c",
+    "storage_bucket": "healtify-66f2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513081244081:android:2b15b768ddd235d950a590",
+        "android_client_info": {
+          "package_name": "com.example.healthy_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513081244081-7htgsk9lrmo7v5go77kjocgb224kjdke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_LYroWcb9N1FEghowUXlhXlF01Fq7zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513081244081-7htgsk9lrmo7v5go77kjocgb224kjdke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
