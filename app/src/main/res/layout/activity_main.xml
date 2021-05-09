@@ -9,5 +9,19 @@
     tools:context=".Activities.MainActivity">
 
 
+    <ImageView
+        android:id="@+id/nxt_button"
+        android:elevation="10dp"
+        android:layout_width="50dp"
+        android:padding="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/foward"
+        android:background="@drawable/bottom_bar_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp">
+
+    </ImageView>
+
 
 </RelativeLayout>

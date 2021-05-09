@@ -3,7 +3,7 @@
     package="com.example.healthy_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,19 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthy_App">
-        <activity android:name=".Activities.Splash_Activity"
-            android:noHistory="true"
-            >
-
+        <activity android:name=".Activities.Profile_Activity"></activity>
+        <activity android:name=".Activities.Test_Activity" />
+        <activity android:name=".Activities.Test_Launch_Activity" />
+        <activity
+            android:name=".Activities.Splash_Activity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity">
-
-        </activity>
+        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>

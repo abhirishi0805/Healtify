@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:attv="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.Test_Launch_Activity">
+
+
+<!--    <com.yalantis.starwars.TilesFrameLayout-->
+<!--        android:id="@+id/tiles_frame_layout"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:sw_animationDuration="1500"-->
+<!--        app:sw_numberOfTilesX="35">-->
+
+<!--        &lt;!&ndash; Your views go here &ndash;&gt;-->
+
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:id="@+id/frame"
+       android:layout_height="match_parent">
+
+
+
+
+
+
+    <me.ibrahimsn.particle.ParticleView
+        android:id="@+id/particleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:particleCount="60"
+        app:particleMinRadius="3"
+        app:particleMaxRadius="10"
+        app:particlesBackgroundColor="#23262a"
+        app:particleColor="@android:color/holo_green_dark"
+        app:particleLineColor="@android:color/holo_green_dark"
+        app:particleLinesEnabled="true" />
+
+
+    <com.dragankrstic.autotypetextview.AutoTypeTextView
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        attv:animateTextTypeWithoutMistakes="Hey , I am Cody , You need to earn a badge for a Space mission in a skill Test , GOOD LUCK!"
+        android:textStyle="bold"
+        android:fontFamily="@font/quicksand_bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:lineHeight="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="match_parent"
+        >
+
+    </com.dragankrstic.autotypetextview.AutoTypeTextView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_man"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loader_rocket.json"
+        app:lottie_loop="true" app:lottie_speed="1"
+        android:layout_centerInParent="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+    <TextView
+        android:id="@+id/ready_text_view"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="START"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_ready_button"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+   </RelativeLayout>
+
+<!--    </com.yalantis.starwars.TilesFrameLayout>-->
+
+</RelativeLayout>

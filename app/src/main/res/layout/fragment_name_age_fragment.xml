@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.name_age_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/template11"
+        android:layout_height="match_parent">
+    </ImageView>
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_nameage"
+        android:hint="Name"
+        android:layout_above="@id/age"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColorHint="#939191"
+        android:textSize="20sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:padding="10dp"
+        android:layout_height="50dp">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_nameage"
+        android:hint="Age"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColorHint="#939191"
+        android:textSize="20sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:padding="10dp"
+        android:layout_height="50dp">
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+
+
+
+
+
+</RelativeLayout>

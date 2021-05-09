@@ -1,10 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.Astigmatism_fragment"
     android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:rpbShowProgressText="false"
+            android:layout_marginTop="20dp"
+            app:rpbProgressColor="@color/progress_colour"
+            android:layout_height="15dp">
+
+        </com.mackhartley.roundedprogressbar.RoundedProgressBar>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/progress_bar"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="100dp"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/coins_text"
+                    android:layout_width="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:layout_height="30dp">
+
+                </TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/coin"
+                    android:layout_height="30dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/badges_text"
+                    android:layout_width="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:layout_height="30dp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/badge"
+                    android:layout_marginStart="16dp"
+                    android:layout_height="30dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/ivAstigmatismQuestion"
@@ -12,7 +112,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:src="@drawable/common_google_signin_btn_icon_dark"
         />
 
     <TextView
@@ -82,4 +181,28 @@
 
     </LinearLayout>
 
-</LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:background="#A9121111"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+
+        </ProgressBar>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

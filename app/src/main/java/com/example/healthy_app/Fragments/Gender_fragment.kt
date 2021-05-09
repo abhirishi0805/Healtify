@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -26,6 +27,13 @@ class Gender_fragment : Fragment() {
         savedInstanceState: Bundle?): View? {
 
         var view = inflater.inflate(R.layout.fragment_gender_fragment, container, false)
+
+//
+//        val window: Window = activity!!.getWindow()
+//
+//        window.statusBarColor= ContextCompat.getColor(context!!, R.color.blue_colour);
+
+
 
 
         relative_man = view.findViewById(R.id.relative_man)
